@@ -3,6 +3,7 @@ import '../widgets/welcome_card.dart';
 import '../widgets/section_title.dart';
 import '../widgets/favorites_wrap.dart';
 import '../widgets/country_card.dart';
+import '../widgets/weather_card.dart';
 import '../models/country.dart';
 
 class TravelHomePage extends StatefulWidget {
@@ -47,6 +48,13 @@ class _TravelHomePageState extends State<TravelHomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const WelcomeCard(),
+          // Wetter-Widget eingefügt
+          const WeatherCard(
+            country: 'Italien',
+            weatherDescription: 'Sonnig',
+            temperature: 27,
+            weatherIcon: Icons.wb_sunny,
+          ),
           const SizedBox(height: 24),
           const SectionTitle("Europa"),
           const SizedBox(height: 8),
